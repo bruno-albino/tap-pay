@@ -1,9 +1,0 @@
-C:\Users\bruno\source\repos\TAPPAY\TAPPAY\bin\Debug\TAPPAY.exe.config
-C:\Users\bruno\source\repos\TAPPAY\TAPPAY\bin\Debug\TAPPAY.exe
-C:\Users\bruno\source\repos\TAPPAY\TAPPAY\bin\Debug\TAPPAY.pdb
-C:\Users\bruno\source\repos\TAPPAY\TAPPAY\obj\Debug\TAPPAY.csprojAssemblyReference.cache
-C:\Users\bruno\source\repos\TAPPAY\TAPPAY\obj\Debug\TAPPAY.Properties.Resources.resources
-C:\Users\bruno\source\repos\TAPPAY\TAPPAY\obj\Debug\TAPPAY.csproj.GenerateResource.cache
-C:\Users\bruno\source\repos\TAPPAY\TAPPAY\obj\Debug\TAPPAY.csproj.CoreCompileInputs.cache
-C:\Users\bruno\source\repos\TAPPAY\TAPPAY\obj\Debug\TAPPAY.exe
-C:\Users\bruno\source\repos\TAPPAY\TAPPAY\obj\Debug\TAPPAY.pdb
