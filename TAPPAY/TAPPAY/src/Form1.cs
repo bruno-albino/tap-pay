@@ -7,6 +7,9 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using TAPPAY.src.Business.Models;
+using TAPPAY.src.config;
+using TAPPAY.src.Domain.Models;
 
 namespace TAPPAY
 {
@@ -15,6 +18,16 @@ namespace TAPPAY
         public Form1()
         {
             InitializeComponent();
+
+            
+            //DataTable retorno = new DataTable();
+            //retorno.Load(config.getAll());
+            //var linha = retorno.DefaultView[0].Row;
+            //Console.WriteLine(linha.ToString());
+
+            ClientBusiness clientbusiness = new ClientBusiness();
+            var clients = clientbusiness.GetList();
+            clients.ForEach(client => Console.WriteLine(client.name));
         }
 
         private void button1_Click(object sender, EventArgs e)

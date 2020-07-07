@@ -99,6 +99,8 @@
     <Compile Include="Form2.Designer.cs">
       <DependentUpon>Form2.cs</DependentUpon>
     </Compile>
+    <Compile Include="src\Business\Interfaces\IClientBusiness.cs" />
+    <Compile Include="src\Business\Models\ClientBusiness.cs" />
     <Compile Include="src\config\Database.cs" />
     <Compile Include="src\Form1.cs">
       <SubType>Form</SubType>
@@ -106,8 +108,14 @@
     <Compile Include="src\Form1.Designer.cs">
       <DependentUpon>Form1.cs</DependentUpon>
     </Compile>
+    <Compile Include="src\Domain\Interfaces\IIndentifier.cs" />
+    <Compile Include="src\Domain\Models\Clients.cs" />
+    <Compile Include="src\Domain\Models\Identifier.cs" />
     <Compile Include="src\Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="src\Repository\Base\Repository.cs" />
+    <Compile Include="src\Repository\Interfaces\IRepository.cs" />
+    <Compile Include="src\Repository\Models\ClientsRepository.cs" />
     <EmbeddedResource Include="Form2.resx">
       <DependentUpon>Form2.cs</DependentUpon>
     </EmbeddedResource>
@@ -137,5 +145,6 @@
   <ItemGroup>
     <None Include="App.config" />
   </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
