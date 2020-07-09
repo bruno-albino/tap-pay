@@ -9,7 +9,7 @@ namespace TAPPAY.src.Repository.Base
 {
     public abstract class Repository<T> : IRepository<T>
     {
-        private static List<T> _list;
+        private static List<T> _list = new List<T>();
         private static object _syncObj = new object();
 
         public bool Add(T obj)

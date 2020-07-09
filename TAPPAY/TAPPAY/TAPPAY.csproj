@@ -93,20 +93,14 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Form2.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Form2.Designer.cs">
-      <DependentUpon>Form2.cs</DependentUpon>
-    </Compile>
     <Compile Include="src\Business\Interfaces\IClientBusiness.cs" />
     <Compile Include="src\Business\Models\ClientBusiness.cs" />
     <Compile Include="src\config\Database.cs" />
-    <Compile Include="src\Form1.cs">
+    <Compile Include="src\Views\form_home.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="src\Form1.Designer.cs">
-      <DependentUpon>Form1.cs</DependentUpon>
+    <Compile Include="src\Views\form_home.Designer.cs">
+      <DependentUpon>form_home.cs</DependentUpon>
     </Compile>
     <Compile Include="src\Domain\Interfaces\IIndentifier.cs" />
     <Compile Include="src\Domain\Models\Clients.cs" />
@@ -116,11 +110,20 @@
     <Compile Include="src\Repository\Base\Repository.cs" />
     <Compile Include="src\Repository\Interfaces\IRepository.cs" />
     <Compile Include="src\Repository\Models\ClientsRepository.cs" />
-    <EmbeddedResource Include="Form2.resx">
-      <DependentUpon>Form2.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="src\Form1.resx">
-      <DependentUpon>Form1.cs</DependentUpon>
+    <Compile Include="src\Views\form_buscaCliente.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="src\Views\form_buscaCliente.Designer.cs">
+      <DependentUpon>form_buscaCliente.cs</DependentUpon>
+    </Compile>
+    <Compile Include="src\Views\form_config.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="src\Views\form_config.Designer.cs">
+      <DependentUpon>form_config.cs</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="src\Views\form_home.resx">
+      <DependentUpon>form_home.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
@@ -145,6 +148,16 @@
   <ItemGroup>
     <None Include="App.config" />
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <Content Include="src\icons\add.png" />
+    <Content Include="src\icons\beer.ico" />
+    <Content Include="src\icons\beer.png" />
+    <Content Include="src\icons\beer2.png" />
+    <Content Include="src\icons\beer3.png" />
+    <Content Include="src\icons\config.ico" />
+    <Content Include="src\icons\config.png" />
+    <Content Include="src\icons\search.png" />
+    <Content Include="src\icons\user.png" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

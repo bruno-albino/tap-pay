@@ -1,4 +1,5 @@
-﻿    using System;
+﻿using MySql.Data.MySqlClient.Memcached;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -11,5 +12,7 @@ namespace TAPPAY.src.Business.Interfaces
     {
         bool Add(Clients clients);
         List<Clients> GetList();
+
+        Clients findByTAG(string TAG);
     }
 }
