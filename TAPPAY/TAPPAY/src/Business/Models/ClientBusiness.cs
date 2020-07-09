@@ -62,5 +62,10 @@ namespace TAPPAY.src.Business.Models
 
             return client;
         }
+
+        public void reduceBeers(Clients client)
+        {
+            
+        }
     }
 }

@@ -14,5 +14,7 @@ namespace TAPPAY.src.Business.Interfaces
         List<Clients> GetList();
 
         Clients findByTAG(string TAG);
+
+        bool reduceBeers(Clients client);
     }
 }

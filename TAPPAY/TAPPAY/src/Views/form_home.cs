@@ -81,6 +81,8 @@ namespace TAPPAY
             }
 
             this.selectedClient = client;
+
+            clientBusiness.reduceBeers(client);
         }
     }
 }
