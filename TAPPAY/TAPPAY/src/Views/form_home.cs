@@ -69,7 +69,7 @@ namespace TAPPAY
         {
             ClientBusiness clientBusiness = new ClientBusiness();
 
-            Clients client = clientBusiness.findByTAG(TAG);
+            Clients client = clientBusiness.FindByTAG(TAG);
 
             if (client is null)
             {
@@ -82,7 +82,30 @@ namespace TAPPAY
 
             this.selectedClient = client;
 
-            clientBusiness.reduceBeers(client);
+            this.reduceBeers();
+        }
+
+        private void reduceBeers()
+        {
+            if(int.Parse(this.selectedClient.beers) <= 0)
+            {
+                MessageBox.Show("Cliente sem cervejas disponíveis");
+                return;
+            }
+            int beersToRemove = tb_quantity.Text == "" ? 1 : int.Parse(tb_quantity.Text);
+            int beers = int.Parse(this.selectedClient.beers) - beersToRemove;
+            this.selectedClient.beers = beers.ToString();
+
+            ClientBusiness clientBusiness = new ClientBusiness();
+            try
+            {
+                clientBusiness.ReduceBeers(this.selectedClient);
+                MessageBox.Show($@"Removido {beersToRemove} cerveja(s)");
+            }
+            catch (Exception e)
+            {
+                MessageBox.Show("Ocorreu um erro ao atualizar os dados do cliente. Por favor, tente novamente");
+            }
         }
     }
 }

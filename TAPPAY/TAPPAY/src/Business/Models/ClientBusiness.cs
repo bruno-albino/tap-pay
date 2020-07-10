@@ -26,7 +26,7 @@ namespace TAPPAY.src.Business.Models
         private void LoadClients()
         {
             Database database = new Database();
-            MySqlDataReader rdr = database.getAllClients();
+            MySqlDataReader rdr = database.GetAllClients();
 
             while (rdr.Read())
             {
@@ -44,9 +44,22 @@ namespace TAPPAY.src.Business.Models
 
         }
 
-        public bool Add(Clients clients)
+        public void Add(Clients client)
         {
-            return true;
+            Database database = new Database();
+            try
+            {
+                database.CreateClient(client);
+
+                var clients = _clientRepository.GetList();
+                int lastId = clients[clients.Count - 1].id;
+                client.id = lastId + 1;
+
+                _clientRepository.Add(client);
+            } catch(Exception e)
+            {
+                throw e;
+            }
         }
 
         public List<Clients> GetList()
@@ -54,7 +67,7 @@ namespace TAPPAY.src.Business.Models
             return _clientRepository.GetList();
         }
 
-        public Clients findByTAG(string TAG)
+        public Clients FindByTAG(string TAG)
         {
             List<Clients> clients = _clientRepository.GetList();
 
@@ -63,9 +76,17 @@ namespace TAPPAY.src.Business.Models
             return client;
         }
 
-        public void reduceBeers(Clients client)
+        public void ReduceBeers(Clients client)
         {
-            
+            Database database = new Database();
+            try
+            {
+                database.UpdateClient(client);
+            } catch(Exception e)
+            {
+                Console.WriteLine("Erro: " + e.Message);
+                throw e;
+            }
         }
     }
 }

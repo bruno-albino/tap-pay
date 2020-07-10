@@ -7,6 +7,7 @@ using System.Data;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Windows.Forms;
 using TAPPAY.src.Domain.Models;
 
 namespace TAPPAY.src.config
@@ -30,7 +31,7 @@ namespace TAPPAY.src.config
             }
         }
 
-        public MySqlDataReader getAllClients()
+        public MySqlDataReader GetAllClients()
         {
             try
             {
@@ -45,33 +46,53 @@ namespace TAPPAY.src.config
             }
         }
 
-        public void getClientByID(int ID)
+        public void UpdateClient(Clients client)
         {
             try
             {
                 connection.Open();
-                command.CommandText = "SELECT * FROM clients WHERE id = @ID";
-                command.Parameters.AddWithValue("ID", ID);
+                command.CommandText = "UPDATE clients SET name=@name, TAG=@TAG, beers=@beers, phone=@phone WHERE id=@id";
+                command.Parameters.AddWithValue("name", client.name);
+                command.Parameters.AddWithValue("TAG", client.TAG);
+                command.Parameters.AddWithValue("beers", client.beers);
+                command.Parameters.AddWithValue("phone", client.phone);
+                command.Parameters.AddWithValue("id", client.id);
+                command.ExecuteNonQuery();
+
+            } catch(Exception e)
+            {
+                throw e;
+            } finally
+            {
+                CloseConnection();
+            }
+        }
+
+        private void CloseConnection()
+        {
+            if (ConnectionState.Open == connection.State)
+            {
+                connection.Close();
+            }
+        }
+
+        public void CreateClient(Clients client)
+        {
+            try
+            {
+
+                connection.Open();
+                command.CommandText = "INSERT INTO clients(name, TAG, beers, phone) VALUES(@name, @TAG, @beers, @phone)";
+                command.Parameters.AddWithValue("name", client.name);
+                command.Parameters.AddWithValue("TAG", client.TAG);
+                command.Parameters.AddWithValue("beers", client.beers);
+                command.Parameters.AddWithValue("phone", client.phone);
                 command.Prepare();
-                MySqlDataReader rdr = command.ExecuteReader();
-                
-                //if(!rdr.HasRows)
-                //{
-                //    return false;
-                //}
-                //int beers = int.Parse(rdr["beers"].ToString());
-
-                //if(beers == 0)
-                //{
-
-                //}
-
-                //command.CommandText = "UPDATE clients SET beers"
+                command.ExecuteNonQuery();
 
 
             } catch(Exception e)
             {
-                Console.WriteLine("Erro: " + e.Message);
                 throw e;
             }
         }

@@ -96,6 +96,12 @@
     <Compile Include="src\Business\Interfaces\IClientBusiness.cs" />
     <Compile Include="src\Business\Models\ClientBusiness.cs" />
     <Compile Include="src\config\Database.cs" />
+    <Compile Include="src\Views\form_addClient.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="src\Views\form_addClient.Designer.cs">
+      <DependentUpon>form_addClient.cs</DependentUpon>
+    </Compile>
     <Compile Include="src\Views\form_home.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -122,6 +128,9 @@
     <Compile Include="src\Views\form_config.Designer.cs">
       <DependentUpon>form_config.cs</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="src\Views\form_addClient.resx">
+      <DependentUpon>form_addClient.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="src\Views\form_home.resx">
       <DependentUpon>form_home.cs</DependentUpon>
     </EmbeddedResource>

@@ -10,11 +10,11 @@ namespace TAPPAY.src.Business.Interfaces
 {
     public interface IClientBusiness
     {
-        bool Add(Clients clients);
+        void Add(Clients client);
         List<Clients> GetList();
 
-        Clients findByTAG(string TAG);
+        Clients FindByTAG(string TAG);
 
-        bool reduceBeers(Clients client);
+        void ReduceBeers(Clients client);
     }
 }
