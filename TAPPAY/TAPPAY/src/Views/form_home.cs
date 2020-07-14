@@ -4,6 +4,7 @@ using System.ComponentModel;
 using System.Data;
 using System.Drawing;
 using System.Linq;
+using System.Management;
 using System.Text;
 using System.Text.RegularExpressions;
 using System.Threading.Tasks;
@@ -17,10 +18,11 @@ namespace TAPPAY
 {
     public partial class form_home : Form
     {
-        Clients selectedClient;
+        private ClientBus clientBusiness;
         public form_home()
         {
             InitializeComponent();
+            clientBusiness = new ClientBus();
         }
 
         private void btn_config_Click(object sender, EventArgs e)
@@ -67,8 +69,6 @@ namespace TAPPAY
 
         private void searchClient(string TAG)
         {
-            ClientBusiness clientBusiness = new ClientBusiness();
-
             Clients client = clientBusiness.FindByTAG(TAG);
 
             if (client is null)
@@ -76,35 +76,47 @@ namespace TAPPAY
                 MessageBox.Show("Cliente não encontrado");
                 tbTAG.Text = "";
                 tbTAG.Focus();
-                this.selectedClient = null;
                 return;
             }
 
-            this.selectedClient = client;
 
-            this.reduceBeers();
+            this.reduceBeers(client);
         }
 
-        private void reduceBeers()
+        private void reduceBeers(Clients client)
         {
-            if(int.Parse(this.selectedClient.beers) <= 0)
+            int beersToRemove = tb_quantity.Text == "" ? 1 : int.Parse(tb_quantity.Text);
+
+            if(int.Parse(client.beers) <= 0 || int.Parse(client.beers) - beersToRemove < 0)
             {
                 MessageBox.Show("Cliente sem cervejas disponíveis");
                 return;
             }
-            int beersToRemove = tb_quantity.Text == "" ? 1 : int.Parse(tb_quantity.Text);
-            int beers = int.Parse(this.selectedClient.beers) - beersToRemove;
-            this.selectedClient.beers = beers.ToString();
 
-            ClientBusiness clientBusiness = new ClientBusiness();
+            int beers = int.Parse(client.beers) - beersToRemove;
+            client.beers = beers.ToString();
+
             try
             {
-                clientBusiness.ReduceBeers(this.selectedClient);
+                clientBusiness.Update(client);
                 MessageBox.Show($@"Removido {beersToRemove} cerveja(s)");
             }
             catch (Exception e)
             {
                 MessageBox.Show("Ocorreu um erro ao atualizar os dados do cliente. Por favor, tente novamente");
+            }
+        }
+
+        private void tb_quantity_KeyDown(object sender, KeyEventArgs e)
+        {
+            if(e.KeyCode == Keys.Enter)
+            {
+                if(tbTAG.Text == "")
+                {
+                    MessageBox.Show("Insira a TAG para remoção das cervejas");
+                    return;
+                }
+                this.searchClient(tbTAG.Text);
             }
         }
     }

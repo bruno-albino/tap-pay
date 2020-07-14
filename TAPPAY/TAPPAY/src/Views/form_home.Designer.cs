@@ -69,6 +69,7 @@
             this.tb_quantity.Name = "tb_quantity";
             this.tb_quantity.Size = new System.Drawing.Size(132, 22);
             this.tb_quantity.TabIndex = 2;
+            this.tb_quantity.KeyDown += new System.Windows.Forms.KeyEventHandler(this.tb_quantity_KeyDown);
             this.tb_quantity.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.onlyNumbers_KeyPress);
             // 
             // tbTAG

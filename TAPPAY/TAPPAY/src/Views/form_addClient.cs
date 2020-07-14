@@ -34,17 +34,16 @@ namespace TAPPAY.src.Views
 
         private void CreateClient()
         {
-            ClientBusiness clientBusiness = new ClientBusiness();
+            ClientBus clientBusiness = new ClientBus();
             Clients client = clientBusiness.FindByTAG(tbTAG.Text);
 
             if(client is null)
             {
                 try
                 {
-                    clientBusiness.Add(new Clients()
+                    clientBusiness.Insert(new Clients()
                     {
                         name = tbName.Text,
-                        beers = "0",
                         phone = Regex.Replace(tbPhone.Text, @"[^\d]", ""),
                         TAG = tbTAG.Text
                     });
@@ -64,7 +63,6 @@ namespace TAPPAY.src.Views
                 return;
             }
 
-            Console.WriteLine();
         }
     }
 }

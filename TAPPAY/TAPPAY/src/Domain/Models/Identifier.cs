@@ -7,7 +7,7 @@ using TAPPAY.src.Domain.Interfaces;
 
 namespace TAPPAY.src.Domain.Models
 {
-    public class Identifier : IIndentifier
+    public class Identifier
     {
         public int id { get; set; }
     }

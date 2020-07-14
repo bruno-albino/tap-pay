@@ -8,7 +8,7 @@ using TAPPAY.src.Repository.Base;
 
 namespace TAPPAY.src.Repository.Models
 {
-    public class ClientsRepository : Repository<Clients>
+    public class ClientsRepository : Repository<Clients> 
     {
         private IList<Clients> Client;
 
