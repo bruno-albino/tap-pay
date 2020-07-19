@@ -19,8 +19,8 @@ namespace TAPPAY.src.Views
 
         private void btn_addCerveja_Click(object sender, EventArgs e)
         {
-            //form_addCerveja addCerveja = new form_addCerveja();
-            //addCerveja.Show();
+            form_addCerveja addCerveja = new form_addCerveja();
+            addCerveja.ShowDialog();
 
         }
 
@@ -34,6 +34,14 @@ namespace TAPPAY.src.Views
         {
             form_buscaCliente buscaCliente = new form_buscaCliente();
             buscaCliente.Show();
+        }
+
+        private void form_config_KeyDown(object sender, KeyEventArgs e)
+        {
+            if (e.KeyCode == Keys.Escape)
+            {
+                this.Close();
+            }
         }
     }
 }

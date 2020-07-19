@@ -28,81 +28,74 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(form_buscaCliente));
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
             this.title = new System.Windows.Forms.Label();
-            this.label1 = new System.Windows.Forms.Label();
-            this.comboBox1 = new System.Windows.Forms.ComboBox();
-            this.btn_buscarCliente = new System.Windows.Forms.Button();
-            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.query = new System.Windows.Forms.TextBox();
+            this.dgClients = new System.Windows.Forms.DataGridView();
+            ((System.ComponentModel.ISupportInitialize)(this.dgClients)).BeginInit();
             this.SuspendLayout();
             // 
             // title
             // 
             this.title.AutoSize = true;
             this.title.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.title.Location = new System.Drawing.Point(132, 9);
+            this.title.Location = new System.Drawing.Point(13, 9);
+            this.title.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.title.Name = "title";
-            this.title.Size = new System.Drawing.Size(184, 24);
+            this.title.Size = new System.Drawing.Size(233, 29);
             this.title.TabIndex = 1;
             this.title.Text = "BUSCAR CLIENTE";
             // 
-            // label1
+            // query
             // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(12, 63);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(125, 20);
-            this.label1.TabIndex = 2;
-            this.label1.Text = "BUSCAR POR";
+            this.query.AccessibleDescription = "";
+            this.query.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.query.Location = new System.Drawing.Point(259, 9);
+            this.query.Margin = new System.Windows.Forms.Padding(4);
+            this.query.MaxLength = 50;
+            this.query.Name = "query";
+            this.query.Size = new System.Drawing.Size(529, 30);
+            this.query.TabIndex = 5;
+            this.query.TextChanged += new System.EventHandler(this.textBox1_TextChanged);
             // 
-            // comboBox1
+            // dgClients
             // 
-            this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Items.AddRange(new object[] {
-            "ID",
-            "NOME",
-            "TAG",
-            "TELEFONE"});
-            this.comboBox1.Location = new System.Drawing.Point(143, 63);
-            this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(144, 21);
-            this.comboBox1.TabIndex = 3;
-            // 
-            // btn_buscarCliente
-            // 
-            this.btn_buscarCliente.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            //this.btn_buscarCliente.Image = ((System.Drawing.Image)(resources.GetObject("btn_buscarCliente.Image")));
-            this.btn_buscarCliente.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.btn_buscarCliente.Location = new System.Drawing.Point(318, 76);
-            this.btn_buscarCliente.Name = "btn_buscarCliente";
-            this.btn_buscarCliente.Size = new System.Drawing.Size(133, 43);
-            this.btn_buscarCliente.TabIndex = 4;
-            this.btn_buscarCliente.Text = "BUSCAR";
-            this.btn_buscarCliente.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btn_buscarCliente.UseVisualStyleBackColor = true;
-            // 
-            // textBox1
-            // 
-            this.textBox1.Location = new System.Drawing.Point(12, 111);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(275, 20);
-            this.textBox1.TabIndex = 5;
+            this.dgClients.AllowUserToAddRows = false;
+            this.dgClients.AllowUserToDeleteRows = false;
+            this.dgClients.AllowUserToResizeRows = false;
+            dataGridViewCellStyle1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.dgClients.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
+            this.dgClients.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.dgClients.ColumnHeadersHeight = 25;
+            this.dgClients.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.DisableResizing;
+            this.dgClients.EditMode = System.Windows.Forms.DataGridViewEditMode.EditProgrammatically;
+            this.dgClients.Location = new System.Drawing.Point(18, 47);
+            this.dgClients.Name = "dgClients";
+            this.dgClients.ReadOnly = true;
+            this.dgClients.RowHeadersWidth = 51;
+            this.dgClients.RowTemplate.Height = 24;
+            this.dgClients.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
+            this.dgClients.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
+            this.dgClients.Size = new System.Drawing.Size(770, 256);
+            this.dgClients.TabIndex = 6;
+            this.dgClients.CellDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgClients_CellDoubleClick);
             // 
             // form_buscaCliente
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(484, 255);
-            this.Controls.Add(this.textBox1);
-            this.Controls.Add(this.btn_buscarCliente);
-            this.Controls.Add(this.comboBox1);
-            this.Controls.Add(this.label1);
+            this.ClientSize = new System.Drawing.Size(807, 314);
+            this.Controls.Add(this.dgClients);
+            this.Controls.Add(this.query);
             this.Controls.Add(this.title);
+            this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "form_buscaCliente";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "v";
+            this.Text = "Buscar cliente";
             this.TopMost = true;
+            this.Activated += new System.EventHandler(this.form_buscaCliente_Activated);
+            this.KeyDown += new System.Windows.Forms.KeyEventHandler(this.form_buscaCliente_KeyDown);
+            ((System.ComponentModel.ISupportInitialize)(this.dgClients)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -111,9 +104,7 @@
         #endregion
 
         private System.Windows.Forms.Label title;
-        private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.ComboBox comboBox1;
-        private System.Windows.Forms.Button btn_buscarCliente;
-        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.TextBox query;
+        private System.Windows.Forms.DataGridView dgClients;
     }
 }

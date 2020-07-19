@@ -33,5 +33,12 @@ namespace TAPPAY.src.Business.Models
         {
             this.clientDAO.Update(client.id, client);
         }
+
+        public List<Clients> GetAll()
+        {
+            List<Clients> clients = this.clientDAO.GetAll();
+
+            return clients;
+        }
     }
 }

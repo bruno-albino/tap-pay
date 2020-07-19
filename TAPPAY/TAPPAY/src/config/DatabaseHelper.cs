@@ -147,6 +147,22 @@ namespace TAPPAY.src.config
             }
         }
 
+        public MySqlDataReader ExecuteDataReader(string query)
+        {
+            try
+            {
+                this.OpenConnection();
+                MySqlCommand command = this.mySqlConnection.CreateCommand();
+                command.CommandText = query;
+                return command.ExecuteReader();
+            }
+            catch (Exception ex)
+            {
+                throw ex;
+            }
+        }
+
+
         public MySqlDataReader ExecuteDataReader(string query, MySqlParameter parameters)
         {
             try
@@ -155,6 +171,22 @@ namespace TAPPAY.src.config
                 MySqlCommand command = this.mySqlConnection.CreateCommand();
                 command.CommandText = query;
                 command.Parameters.Add(parameters);
+                return command.ExecuteReader();
+            }
+            catch (Exception ex)
+            {
+                throw ex;
+            }
+        }
+
+        public MySqlDataReader ExecuteDataReader(string query, MySqlParameter[] parameters)
+        {
+            try
+            {
+                this.OpenConnection();
+                MySqlCommand command = this.mySqlConnection.CreateCommand();
+                command.CommandText = query;
+                command.Parameters.AddRange(parameters);
                 return command.ExecuteReader();
             }
             catch (Exception ex)

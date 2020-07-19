@@ -28,7 +28,7 @@ namespace TAPPAY
         private void btn_config_Click(object sender, EventArgs e)
         {
             form_config formConfig = new form_config();
-            formConfig.ShowDialog();
+            formConfig.Show();
         }
 
         private void onlyNumbers_KeyPress(object sender, KeyPressEventArgs e)
@@ -63,6 +63,10 @@ namespace TAPPAY
 
         private void btn_ok_Click(object sender, EventArgs e)
         {
+            if(tbTAG.Text == "")
+            {
+                return;
+            }
             searchClient(tbTAG.Text);
         }
 
@@ -101,7 +105,7 @@ namespace TAPPAY
                 clientBusiness.Update(client);
                 MessageBox.Show($@"Removido {beersToRemove} cerveja(s)");
             }
-            catch (Exception e)
+            catch (Exception)
             {
                 MessageBox.Show("Ocorreu um erro ao atualizar os dados do cliente. Por favor, tente novamente");
             }

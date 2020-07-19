@@ -1,5 +1,6 @@
 ﻿using EO.Internal;
 using MySql.Data.MySqlClient;
+using MySql.Data.MySqlClient.Memcached;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -58,7 +59,6 @@ namespace TAPPAY.src.DAO
                 new MySqlParameter("beers", "0"),
                 new MySqlParameter("phone", client.phone)
             );
-
         }
 
         public void Update(int id, Clients client)
@@ -112,6 +112,33 @@ namespace TAPPAY.src.DAO
             }
 
             return client;
+        }
+
+        public List<Clients> GetAll()
+        {
+            string query = "SELECT * FROM clients";
+            List<Clients> clients = new List<Clients>();
+
+            MySqlDataReader reader = this.databaseHelper.ExecuteDataReader(query);
+
+            while(reader.Read())
+            {
+                clients.Add(new Clients()
+                {
+                    id = Convert.ToInt32(reader["id"]),
+                    name = reader["name"].ToString(),
+                    beers = reader["beers"].ToString(),
+                    phone = reader["phone"].ToString(),
+                    TAG = reader["TAG"].ToString()
+                });
+            }
+
+            if(!reader.IsClosed)
+            {
+                reader.Close();
+            }
+
+            return clients;
         }
 
     }

@@ -85,7 +85,7 @@
             // tbName
             // 
             this.tbName.Location = new System.Drawing.Point(105, 82);
-            this.tbName.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.tbName.Margin = new System.Windows.Forms.Padding(4);
             this.tbName.Name = "tbName";
             this.tbName.Size = new System.Drawing.Size(523, 22);
             this.tbName.TabIndex = 4;
@@ -93,7 +93,8 @@
             // tbTAG
             // 
             this.tbTAG.Location = new System.Drawing.Point(421, 143);
-            this.tbTAG.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.tbTAG.Margin = new System.Windows.Forms.Padding(4);
+            this.tbTAG.MaxLength = 8;
             this.tbTAG.Name = "tbTAG";
             this.tbTAG.Size = new System.Drawing.Size(207, 22);
             this.tbTAG.TabIndex = 5;
@@ -101,7 +102,7 @@
             // tbPhone
             // 
             this.tbPhone.Location = new System.Drawing.Point(169, 143);
-            this.tbPhone.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.tbPhone.Margin = new System.Windows.Forms.Padding(4);
             this.tbPhone.Mask = "(00)00000-0000";
             this.tbPhone.Name = "tbPhone";
             this.tbPhone.Size = new System.Drawing.Size(148, 22);
@@ -113,7 +114,7 @@
             this.btn_addClient.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btn_addClient.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.btn_addClient.Location = new System.Drawing.Point(193, 194);
-            this.btn_addClient.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btn_addClient.Margin = new System.Windows.Forms.Padding(4);
             this.btn_addClient.Name = "btn_addClient";
             this.btn_addClient.Size = new System.Drawing.Size(203, 49);
             this.btn_addClient.TabIndex = 7;
@@ -136,11 +137,12 @@
             this.Controls.Add(this.lbl_telefone);
             this.Controls.Add(this.lbl_nome);
             this.Controls.Add(this.title);
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "form_addClient";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "ADICIONAR CLIENTE";
             this.TopMost = true;
+            this.KeyDown += new System.Windows.Forms.KeyEventHandler(this.form_addClient_KeyDown);
             this.ResumeLayout(false);
             this.PerformLayout();
 
