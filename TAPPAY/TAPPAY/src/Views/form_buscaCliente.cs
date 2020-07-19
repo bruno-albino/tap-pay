@@ -23,7 +23,6 @@ namespace TAPPAY.src.Views
             clientBusiness = new ClientBus();
             clients = new List<Clients>();
 
-            this.loadClients();
         }
 
         private void loadClients()
@@ -38,7 +37,6 @@ namespace TAPPAY.src.Views
             dgClients.Columns["name"].HeaderText = "NOME";
             dgClients.Columns["beers"].HeaderText = "CERVEJAS";
             dgClients.Columns["phone"].HeaderText = "TELEFONE";
-
         }
 
         private void textBox1_TextChanged(object sender, EventArgs e)
