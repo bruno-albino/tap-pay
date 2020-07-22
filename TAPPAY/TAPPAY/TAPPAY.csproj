@@ -112,11 +112,11 @@
     <Compile Include="src\Views\form_addCerveja.Designer.cs">
       <DependentUpon>form_addCerveja.cs</DependentUpon>
     </Compile>
-    <Compile Include="src\Views\form_addClient.cs">
+    <Compile Include="src\Views\form_addCliente.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="src\Views\form_addClient.Designer.cs">
-      <DependentUpon>form_addClient.cs</DependentUpon>
+    <Compile Include="src\Views\form_addCliente.Designer.cs">
+      <DependentUpon>form_addCliente.cs</DependentUpon>
     </Compile>
     <Compile Include="src\Views\form_home.cs">
       <SubType>Form</SubType>
@@ -143,8 +143,8 @@
     <EmbeddedResource Include="src\Views\form_addCerveja.resx">
       <DependentUpon>form_addCerveja.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="src\Views\form_addClient.resx">
-      <DependentUpon>form_addClient.cs</DependentUpon>
+    <EmbeddedResource Include="src\Views\form_addCliente.resx">
+      <DependentUpon>form_addCliente.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="src\Views\form_buscaCliente.resx">
       <DependentUpon>form_buscaCliente.cs</DependentUpon>

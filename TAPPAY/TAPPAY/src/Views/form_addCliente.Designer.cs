@@ -1,6 +1,6 @@
 ﻿namespace TAPPAY.src.Views
 {
-    partial class form_addClient
+    partial class form_addCliente
     {
         /// <summary>
         /// Required designer variable.

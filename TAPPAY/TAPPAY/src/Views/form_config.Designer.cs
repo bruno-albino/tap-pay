@@ -193,6 +193,7 @@
             this.button2.TabIndex = 0;
             this.button2.Text = "ADICIONAR CERVEJAS";
             this.button2.UseVisualStyleBackColor = true;
+            this.button2.Click += new System.EventHandler(this.btn_addCerveja_Click);
             // 
             // panel3
             // 
@@ -274,9 +275,9 @@
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.PictureBox pictureBox2;
-        private System.Windows.Forms.Button button2;
         private System.Windows.Forms.Panel panel3;
         private System.Windows.Forms.PictureBox pictureBox3;
         private System.Windows.Forms.Button button3;
+        public System.Windows.Forms.Button button2;
     }
 }

@@ -55,5 +55,15 @@ namespace TAPPAY.src.Views
         {
             this.Close();
         }
+
+        private void btn_close_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
+
+        private void btAddBeers_Click_1(object sender, EventArgs e)
+        {
+
+        }
     }
 }

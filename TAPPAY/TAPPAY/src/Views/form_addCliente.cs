@@ -14,12 +14,12 @@ using TAPPAY.src.Domain.Models;
 
 namespace TAPPAY.src.Views
 {
-    public partial class form_addClient : Form
+    public partial class form_addCliente : Form
     {
         private ClientBus clientBusiness;
         private int? clientId;
         private string clientBeers;
-        public form_addClient()
+        public form_addCliente()
         {
             InitializeComponent();
             clientBusiness = new ClientBus();
@@ -27,7 +27,7 @@ namespace TAPPAY.src.Views
 
         }
 
-        public form_addClient(Clients client)
+        public form_addCliente(Clients client)
         {
             InitializeComponent();
             clientBusiness = new ClientBus();

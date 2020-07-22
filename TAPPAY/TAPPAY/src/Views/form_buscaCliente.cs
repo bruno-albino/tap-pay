@@ -47,7 +47,7 @@ namespace TAPPAY.src.Views
         private void dgClients_CellDoubleClick(object sender, DataGridViewCellEventArgs e)
         {
             List<Clients> teste = (List<Clients>) dgClients.DataSource;
-            form_addClient formAddClient = new form_addClient(teste[e.RowIndex]);
+            form_addCliente formAddClient = new form_addCliente(teste[e.RowIndex]);
             formAddClient.Show();
         }
 
