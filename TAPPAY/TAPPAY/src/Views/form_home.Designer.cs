@@ -81,10 +81,10 @@
             // 
             this.lbl_tag.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.lbl_tag.AutoSize = true;
-            this.lbl_tag.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbl_tag.Font = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbl_tag.Location = new System.Drawing.Point(6, 19);
             this.lbl_tag.Name = "lbl_tag";
-            this.lbl_tag.Size = new System.Drawing.Size(58, 24);
+            this.lbl_tag.Size = new System.Drawing.Size(55, 22);
             this.lbl_tag.TabIndex = 3;
             this.lbl_tag.Text = "TAG:";
             // 
@@ -105,10 +105,10 @@
             this.lbl_qtd.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left)));
             this.lbl_qtd.AutoSize = true;
-            this.lbl_qtd.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbl_qtd.Font = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbl_qtd.Location = new System.Drawing.Point(2, 19);
             this.lbl_qtd.Name = "lbl_qtd";
-            this.lbl_qtd.Size = new System.Drawing.Size(124, 24);
+            this.lbl_qtd.Size = new System.Drawing.Size(130, 22);
             this.lbl_qtd.TabIndex = 1;
             this.lbl_qtd.Text = "Quantidade:";
             this.lbl_qtd.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -197,6 +197,7 @@
             this.button1.Size = new System.Drawing.Size(25, 25);
             this.button1.TabIndex = 13;
             this.button1.UseVisualStyleBackColor = true;
+            // 
             // form_home
             // 
             this.AllowDrop = true;
@@ -214,7 +215,6 @@
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.KeyPreview = true;
             this.MaximizeBox = false;
-            this.MinimizeBox = false;
             this.Name = "form_home";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "TAP PAY";
