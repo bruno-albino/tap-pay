@@ -73,7 +73,7 @@
             this.tbTAG.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.tbTAG.Location = new System.Drawing.Point(76, 18);
             this.tbTAG.Name = "tbTAG";
-            this.tbTAG.Size = new System.Drawing.Size(168, 27);
+            this.tbTAG.Size = new System.Drawing.Size(168, 30);
             this.tbTAG.TabIndex = 4;
             this.tbTAG.KeyDown += new System.Windows.Forms.KeyEventHandler(this.tbTAG_KeyDown);
             this.tbTAG.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.onlyNumbers_KeyPress);
@@ -82,10 +82,10 @@
             // 
             this.lbl_tag.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.lbl_tag.AutoSize = true;
-            this.lbl_tag.Font = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbl_tag.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbl_tag.Location = new System.Drawing.Point(6, 19);
             this.lbl_tag.Name = "lbl_tag";
-            this.lbl_tag.Size = new System.Drawing.Size(55, 22);
+            this.lbl_tag.Size = new System.Drawing.Size(68, 29);
             this.lbl_tag.TabIndex = 3;
             this.lbl_tag.Text = "TAG:";
             // 
@@ -96,7 +96,7 @@
             this.tb_quantity.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.tb_quantity.Location = new System.Drawing.Point(132, 18);
             this.tb_quantity.Name = "tb_quantity";
-            this.tb_quantity.Size = new System.Drawing.Size(112, 27);
+            this.tb_quantity.Size = new System.Drawing.Size(112, 30);
             this.tb_quantity.TabIndex = 2;
             this.tb_quantity.KeyDown += new System.Windows.Forms.KeyEventHandler(this.tb_quantity_KeyDown);
             this.tb_quantity.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.onlyNumbers_KeyPress);
@@ -106,10 +106,10 @@
             this.lbl_qtd.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left)));
             this.lbl_qtd.AutoSize = true;
-            this.lbl_qtd.Font = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbl_qtd.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbl_qtd.Location = new System.Drawing.Point(2, 19);
             this.lbl_qtd.Name = "lbl_qtd";
-            this.lbl_qtd.Size = new System.Drawing.Size(130, 22);
+            this.lbl_qtd.Size = new System.Drawing.Size(144, 29);
             this.lbl_qtd.TabIndex = 1;
             this.lbl_qtd.Text = "Quantidade:";
             this.lbl_qtd.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -161,6 +161,7 @@
             this.btn_ok.TabIndex = 5;
             this.btn_ok.UseVisualStyleBackColor = true;
             this.btn_ok.Click += new System.EventHandler(this.btn_ok_Click);
+            this.btn_ok.KeyDown += new System.Windows.Forms.KeyEventHandler(this.form_home_KeyDown);
             // 
             // panel4
             // 
@@ -214,7 +215,7 @@
             this.Controls.Add(this.panel3);
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.panel1);
-            this.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.ForeColor = System.Drawing.Color.White;
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.KeyPreview = true;

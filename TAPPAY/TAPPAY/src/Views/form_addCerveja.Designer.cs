@@ -78,7 +78,7 @@
             this.btAddBeers.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(150)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
             this.btAddBeers.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
             this.btAddBeers.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btAddBeers.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btAddBeers.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btAddBeers.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btAddBeers.Location = new System.Drawing.Point(65, 5);
             this.btAddBeers.Name = "btAddBeers";
@@ -86,7 +86,7 @@
             this.btAddBeers.TabIndex = 0;
             this.btAddBeers.Text = "ADICIONAR CERVEJA";
             this.btAddBeers.UseVisualStyleBackColor = true;
-            this.btAddBeers.Click += new System.EventHandler(this.btAddBeers_Click_1);
+            this.btAddBeers.Click += new System.EventHandler(this.btAddBeers_Click);
             // 
             // button1
             // 
@@ -147,7 +147,7 @@
             this.lbl_qtd.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbl_qtd.Location = new System.Drawing.Point(2, 19);
             this.lbl_qtd.Name = "lbl_qtd";
-            this.lbl_qtd.Size = new System.Drawing.Size(124, 24);
+            this.lbl_qtd.Size = new System.Drawing.Size(155, 29);
             this.lbl_qtd.TabIndex = 1;
             this.lbl_qtd.Text = "Quantidade:";
             this.lbl_qtd.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -159,7 +159,7 @@
             this.tb_quantity.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.tb_quantity.Location = new System.Drawing.Point(132, 18);
             this.tb_quantity.Name = "tb_quantity";
-            this.tb_quantity.Size = new System.Drawing.Size(112, 31);
+            this.tb_quantity.Size = new System.Drawing.Size(112, 34);
             this.tb_quantity.TabIndex = 2;
             // 
             // panel2
@@ -176,10 +176,10 @@
             // 
             this.lbl_tag.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.lbl_tag.AutoSize = true;
-            this.lbl_tag.Font = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbl_tag.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbl_tag.Location = new System.Drawing.Point(6, 19);
             this.lbl_tag.Name = "lbl_tag";
-            this.lbl_tag.Size = new System.Drawing.Size(55, 22);
+            this.lbl_tag.Size = new System.Drawing.Size(68, 29);
             this.lbl_tag.TabIndex = 3;
             this.lbl_tag.Text = "TAG:";
             // 
@@ -190,7 +190,7 @@
             this.tbTag.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.tbTag.Location = new System.Drawing.Point(76, 18);
             this.tbTag.Name = "tbTag";
-            this.tbTag.Size = new System.Drawing.Size(168, 31);
+            this.tbTag.Size = new System.Drawing.Size(168, 34);
             this.tbTag.TabIndex = 4;
             // 
             // panel3
@@ -208,10 +208,10 @@
             this.label1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left)));
             this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.Location = new System.Drawing.Point(2, 19);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(130, 22);
+            this.label1.Size = new System.Drawing.Size(144, 29);
             this.label1.TabIndex = 1;
             this.label1.Text = "Quantidade:";
             this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -223,7 +223,7 @@
             this.tbQuantity.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.tbQuantity.Location = new System.Drawing.Point(132, 18);
             this.tbQuantity.Name = "tbQuantity";
-            this.tbQuantity.Size = new System.Drawing.Size(112, 31);
+            this.tbQuantity.Size = new System.Drawing.Size(112, 34);
             this.tbQuantity.TabIndex = 2;
             // 
             // form_addCerveja
@@ -238,11 +238,11 @@
             this.Controls.Add(this.button1);
             this.Controls.Add(this.btn_close);
             this.Controls.Add(this.panel_addCliente);
-            this.Font = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.ForeColor = System.Drawing.Color.White;
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.KeyPreview = true;
-            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "form_addCerveja";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
             this.Text = "Adicionar Cerveja";

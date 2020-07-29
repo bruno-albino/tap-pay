@@ -36,14 +36,14 @@
             this.button1 = new System.Windows.Forms.Button();
             this.btn_close = new System.Windows.Forms.Button();
             this.panel_addCliente = new System.Windows.Forms.Panel();
-            this.btn_addCliente = new System.Windows.Forms.Button();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.btn_addClient = new System.Windows.Forms.Button();
             this.panel2 = new System.Windows.Forms.Panel();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.button2 = new System.Windows.Forms.Button();
             this.panel3 = new System.Windows.Forms.Panel();
             this.pictureBox3 = new System.Windows.Forms.PictureBox();
-            this.button3 = new System.Windows.Forms.Button();
+            this.btnBuscarClient = new System.Windows.Forms.Button();
             this.panel4.SuspendLayout();
             this.panel1.SuspendLayout();
             this.panel_addCliente.SuspendLayout();
@@ -82,7 +82,7 @@
             this.lbl_qtd.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbl_qtd.Location = new System.Drawing.Point(2, 19);
             this.lbl_qtd.Name = "lbl_qtd";
-            this.lbl_qtd.Size = new System.Drawing.Size(124, 24);
+            this.lbl_qtd.Size = new System.Drawing.Size(155, 29);
             this.lbl_qtd.TabIndex = 1;
             this.lbl_qtd.Text = "Quantidade:";
             this.lbl_qtd.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -94,7 +94,7 @@
             this.tb_quantity.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.tb_quantity.Location = new System.Drawing.Point(132, 18);
             this.tb_quantity.Name = "tb_quantity";
-            this.tb_quantity.Size = new System.Drawing.Size(112, 27);
+            this.tb_quantity.Size = new System.Drawing.Size(112, 30);
             this.tb_quantity.TabIndex = 2;
             // 
             // button1
@@ -129,25 +129,11 @@
             // panel_addCliente
             // 
             this.panel_addCliente.Controls.Add(this.pictureBox1);
-            this.panel_addCliente.Controls.Add(this.btn_addCliente);
+            this.panel_addCliente.Controls.Add(this.btn_addClient);
             this.panel_addCliente.Location = new System.Drawing.Point(270, 65);
             this.panel_addCliente.Name = "panel_addCliente";
             this.panel_addCliente.Size = new System.Drawing.Size(270, 60);
             this.panel_addCliente.TabIndex = 17;
-            // 
-            // btn_addCliente
-            // 
-            this.btn_addCliente.FlatAppearance.BorderSize = 0;
-            this.btn_addCliente.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(150)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
-            this.btn_addCliente.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
-            this.btn_addCliente.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btn_addCliente.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btn_addCliente.Location = new System.Drawing.Point(65, 5);
-            this.btn_addCliente.Name = "btn_addCliente";
-            this.btn_addCliente.Size = new System.Drawing.Size(200, 50);
-            this.btn_addCliente.TabIndex = 0;
-            this.btn_addCliente.Text = "ADICIONAR CLIENTE";
-            this.btn_addCliente.UseVisualStyleBackColor = true;
             // 
             // pictureBox1
             // 
@@ -159,6 +145,21 @@
             this.pictureBox1.Size = new System.Drawing.Size(60, 50);
             this.pictureBox1.TabIndex = 1;
             this.pictureBox1.TabStop = false;
+            // 
+            // btn_addClient
+            // 
+            this.btn_addClient.FlatAppearance.BorderSize = 0;
+            this.btn_addClient.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(150)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
+            this.btn_addClient.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
+            this.btn_addClient.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btn_addClient.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btn_addClient.Location = new System.Drawing.Point(65, 5);
+            this.btn_addClient.Name = "btn_addClient";
+            this.btn_addClient.Size = new System.Drawing.Size(200, 50);
+            this.btn_addClient.TabIndex = 0;
+            this.btn_addClient.Text = "ADICIONAR CLIENTE";
+            this.btn_addClient.UseVisualStyleBackColor = true;
+            this.btn_addClient.Click += new System.EventHandler(this.btn_addClient_Click);
             // 
             // panel2
             // 
@@ -198,7 +199,7 @@
             // panel3
             // 
             this.panel3.Controls.Add(this.pictureBox3);
-            this.panel3.Controls.Add(this.button3);
+            this.panel3.Controls.Add(this.btnBuscarClient);
             this.panel3.Location = new System.Drawing.Point(540, 65);
             this.panel3.Name = "panel3";
             this.panel3.Size = new System.Drawing.Size(270, 60);
@@ -215,19 +216,20 @@
             this.pictureBox3.TabIndex = 1;
             this.pictureBox3.TabStop = false;
             // 
-            // button3
+            // btnBuscarClient
             // 
-            this.button3.FlatAppearance.BorderSize = 0;
-            this.button3.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(150)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
-            this.button3.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
-            this.button3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button3.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button3.Location = new System.Drawing.Point(65, 5);
-            this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(200, 50);
-            this.button3.TabIndex = 0;
-            this.button3.Text = "BUSCAR CLIENTE";
-            this.button3.UseVisualStyleBackColor = true;
+            this.btnBuscarClient.FlatAppearance.BorderSize = 0;
+            this.btnBuscarClient.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(150)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
+            this.btnBuscarClient.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
+            this.btnBuscarClient.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnBuscarClient.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnBuscarClient.Location = new System.Drawing.Point(65, 5);
+            this.btnBuscarClient.Name = "btnBuscarClient";
+            this.btnBuscarClient.Size = new System.Drawing.Size(200, 50);
+            this.btnBuscarClient.TabIndex = 0;
+            this.btnBuscarClient.Text = "BUSCAR CLIENTE";
+            this.btnBuscarClient.UseVisualStyleBackColor = true;
+            this.btnBuscarClient.Click += new System.EventHandler(this.btn_buscarCliente_Click);
             // 
             // form_config
             // 
@@ -241,7 +243,7 @@
             this.Controls.Add(this.button1);
             this.Controls.Add(this.btn_close);
             this.Controls.Add(this.panel4);
-            this.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.ForeColor = System.Drawing.Color.White;
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.KeyPreview = true;
@@ -271,13 +273,13 @@
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.Button btn_close;
         private System.Windows.Forms.Panel panel_addCliente;
-        private System.Windows.Forms.Button btn_addCliente;
+        private System.Windows.Forms.Button btn_addClient;
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.PictureBox pictureBox2;
         private System.Windows.Forms.Panel panel3;
         private System.Windows.Forms.PictureBox pictureBox3;
-        private System.Windows.Forms.Button button3;
+        private System.Windows.Forms.Button btnBuscarClient;
         public System.Windows.Forms.Button button2;
     }
 }

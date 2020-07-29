@@ -24,7 +24,7 @@ namespace TAPPAY.src.Views
 
         }
 
-        private void btn_addCliente_Click(object sender, EventArgs e)
+        private void btn_addClient_Click(object sender, EventArgs e)
         {
             form_addCliente addClient = new form_addCliente();
             addClient.Show();
@@ -54,5 +54,6 @@ namespace TAPPAY.src.Views
             form_addCerveja formAddCerveja = new form_addCerveja();
             formAddCerveja.Show();
         }
+
     }
 }
