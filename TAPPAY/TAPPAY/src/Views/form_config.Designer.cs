@@ -44,6 +44,7 @@
             this.panel3 = new System.Windows.Forms.Panel();
             this.pictureBox3 = new System.Windows.Forms.PictureBox();
             this.btnBuscarClient = new System.Windows.Forms.Button();
+            this.title = new System.Windows.Forms.Label();
             this.panel4.SuspendLayout();
             this.panel1.SuspendLayout();
             this.panel_addCliente.SuspendLayout();
@@ -82,7 +83,7 @@
             this.lbl_qtd.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbl_qtd.Location = new System.Drawing.Point(2, 19);
             this.lbl_qtd.Name = "lbl_qtd";
-            this.lbl_qtd.Size = new System.Drawing.Size(155, 29);
+            this.lbl_qtd.Size = new System.Drawing.Size(124, 24);
             this.lbl_qtd.TabIndex = 1;
             this.lbl_qtd.Text = "Quantidade:";
             this.lbl_qtd.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -94,7 +95,7 @@
             this.tb_quantity.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.tb_quantity.Location = new System.Drawing.Point(132, 18);
             this.tb_quantity.Name = "tb_quantity";
-            this.tb_quantity.Size = new System.Drawing.Size(112, 30);
+            this.tb_quantity.Size = new System.Drawing.Size(112, 26);
             this.tb_quantity.TabIndex = 2;
             // 
             // button1
@@ -231,12 +232,24 @@
             this.btnBuscarClient.UseVisualStyleBackColor = true;
             this.btnBuscarClient.Click += new System.EventHandler(this.btn_buscarCliente_Click);
             // 
+            // title
+            // 
+            this.title.AutoSize = true;
+            this.title.Font = new System.Drawing.Font("Century Gothic", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.title.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+            this.title.Location = new System.Drawing.Point(330, 19);
+            this.title.Name = "title";
+            this.title.Size = new System.Drawing.Size(225, 30);
+            this.title.TabIndex = 19;
+            this.title.Text = "CONFIGURAÇÕES";
+            // 
             // form_config
             // 
             this.AllowDrop = true;
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(41)))), ((int)(((byte)(44)))), ((int)(((byte)(51)))));
             this.ClientSize = new System.Drawing.Size(810, 130);
+            this.Controls.Add(this.title);
             this.Controls.Add(this.panel3);
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.panel_addCliente);
@@ -262,6 +275,7 @@
             this.panel3.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
             this.ResumeLayout(false);
+            this.PerformLayout();
 
         }
 
@@ -281,5 +295,6 @@
         private System.Windows.Forms.PictureBox pictureBox3;
         private System.Windows.Forms.Button btnBuscarClient;
         public System.Windows.Forms.Button button2;
+        private System.Windows.Forms.Label title;
     }
 }

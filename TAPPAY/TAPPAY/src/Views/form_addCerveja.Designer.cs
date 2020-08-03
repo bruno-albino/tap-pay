@@ -44,6 +44,7 @@
             this.panel3 = new System.Windows.Forms.Panel();
             this.label1 = new System.Windows.Forms.Label();
             this.tbQuantity = new System.Windows.Forms.TextBox();
+            this.title = new System.Windows.Forms.Label();
             this.panel_addCliente.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.panel4.SuspendLayout();
@@ -147,7 +148,7 @@
             this.lbl_qtd.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbl_qtd.Location = new System.Drawing.Point(2, 19);
             this.lbl_qtd.Name = "lbl_qtd";
-            this.lbl_qtd.Size = new System.Drawing.Size(155, 29);
+            this.lbl_qtd.Size = new System.Drawing.Size(124, 24);
             this.lbl_qtd.TabIndex = 1;
             this.lbl_qtd.Text = "Quantidade:";
             this.lbl_qtd.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -159,7 +160,7 @@
             this.tb_quantity.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.tb_quantity.Location = new System.Drawing.Point(132, 18);
             this.tb_quantity.Name = "tb_quantity";
-            this.tb_quantity.Size = new System.Drawing.Size(112, 34);
+            this.tb_quantity.Size = new System.Drawing.Size(112, 29);
             this.tb_quantity.TabIndex = 2;
             // 
             // panel2
@@ -179,7 +180,7 @@
             this.lbl_tag.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbl_tag.Location = new System.Drawing.Point(6, 19);
             this.lbl_tag.Name = "lbl_tag";
-            this.lbl_tag.Size = new System.Drawing.Size(68, 29);
+            this.lbl_tag.Size = new System.Drawing.Size(54, 24);
             this.lbl_tag.TabIndex = 3;
             this.lbl_tag.Text = "TAG:";
             // 
@@ -190,7 +191,7 @@
             this.tbTag.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.tbTag.Location = new System.Drawing.Point(76, 18);
             this.tbTag.Name = "tbTag";
-            this.tbTag.Size = new System.Drawing.Size(168, 34);
+            this.tbTag.Size = new System.Drawing.Size(168, 29);
             this.tbTag.TabIndex = 4;
             // 
             // panel3
@@ -211,7 +212,7 @@
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.Location = new System.Drawing.Point(2, 19);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(144, 29);
+            this.label1.Size = new System.Drawing.Size(113, 24);
             this.label1.TabIndex = 1;
             this.label1.Text = "Quantidade:";
             this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -223,8 +224,19 @@
             this.tbQuantity.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.tbQuantity.Location = new System.Drawing.Point(132, 18);
             this.tbQuantity.Name = "tbQuantity";
-            this.tbQuantity.Size = new System.Drawing.Size(112, 34);
+            this.tbQuantity.Size = new System.Drawing.Size(112, 29);
             this.tbQuantity.TabIndex = 2;
+            // 
+            // title
+            // 
+            this.title.AutoSize = true;
+            this.title.Font = new System.Drawing.Font("Century Gothic", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.title.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+            this.title.Location = new System.Drawing.Point(335, 19);
+            this.title.Name = "title";
+            this.title.Size = new System.Drawing.Size(265, 30);
+            this.title.TabIndex = 24;
+            this.title.Text = "ADICIONAR CERVEJA";
             // 
             // form_addCerveja
             // 
@@ -232,6 +244,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(41)))), ((int)(((byte)(44)))), ((int)(((byte)(51)))));
             this.ClientSize = new System.Drawing.Size(810, 130);
+            this.Controls.Add(this.title);
             this.Controls.Add(this.panel3);
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.panel4);
@@ -256,6 +269,7 @@
             this.panel3.ResumeLayout(false);
             this.panel3.PerformLayout();
             this.ResumeLayout(false);
+            this.PerformLayout();
 
         }
 
@@ -275,5 +289,6 @@
         private System.Windows.Forms.Panel panel3;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.TextBox tbQuantity;
+        private System.Windows.Forms.Label title;
     }
 }

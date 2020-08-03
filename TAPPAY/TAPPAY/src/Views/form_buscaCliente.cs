@@ -124,5 +124,10 @@ namespace TAPPAY.src.Views
                 this.Close();
             }
         }
+
+        private void btn_close_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
     }
 }
